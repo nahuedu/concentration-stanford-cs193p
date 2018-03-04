@@ -21,7 +21,9 @@ class Concentration {
         }
     }
     
-    func choose(card: Card){
+    func chooseCard(at index: Int){
+        let card = cardCollection[index]
+        
         if chosenCard == nil{
             card.wasChosen()
             chosenCard = card
