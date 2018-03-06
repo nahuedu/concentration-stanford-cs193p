@@ -12,7 +12,7 @@ import Foundation
 class Concentration {
     
     var cardCollection = [Card]()
-    var chosenCard : Card?
+    var gameState : GameState = NoCardsFaceUpGameState()
     
     init(numberOfPairsOfCards : Int) {
         for index in 1...numberOfPairsOfCards{
@@ -23,20 +23,7 @@ class Concentration {
     
     func chooseCard(at index: Int){
         let card = cardCollection[index]
-        
-        if chosenCard == nil{
-            card.wasChosen()
-            chosenCard = card
-        } else {
-            if doCardsMatch(chosenCard!, card){
-                card.match()
-                chosenCard!.match()
-                chosenCard = nil
-            }
-        }
+        self.gameState = self.gameState.chooseCard(card)
     }
     
-    func doCardsMatch(_ card1: Card, _ card2 : Card) -> Bool{
-        return card1.identifier == card2.identifier
-    }
 }

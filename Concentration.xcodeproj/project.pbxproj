@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7266AF05204E100E00112A1E /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266AF04204E100E00112A1E /* GameState.swift */; };
+		7266AF07204E108A00112A1E /* NoCardsFaceUpGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266AF06204E108A00112A1E /* NoCardsFaceUpGameState.swift */; };
+		7266AF09204E112600112A1E /* OneCardFaceUpGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266AF08204E112600112A1E /* OneCardFaceUpGameState.swift */; };
+		7266AF0B204E150500112A1E /* TwoFaceUpCardsGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266AF0A204E150500112A1E /* TwoFaceUpCardsGameState.swift */; };
 		72CE9946204C570B00436865 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE9945204C570B00436865 /* Card.swift */; };
 		72CE9948204C58C500436865 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE9947204C58C500436865 /* Concentration.swift */; };
 		72E968E4204793B100D9CF28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E968E3204793B100D9CF28 /* AppDelegate.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7266AF04204E100E00112A1E /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		7266AF06204E108A00112A1E /* NoCardsFaceUpGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCardsFaceUpGameState.swift; sourceTree = "<group>"; };
+		7266AF08204E112600112A1E /* OneCardFaceUpGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneCardFaceUpGameState.swift; sourceTree = "<group>"; };
+		7266AF0A204E150500112A1E /* TwoFaceUpCardsGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFaceUpCardsGameState.swift; sourceTree = "<group>"; };
 		72CE9945204C570B00436865 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		72CE9947204C58C500436865 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		72E968E0204793B100D9CF28 /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +74,10 @@
 				72E968EC204793B100D9CF28 /* LaunchScreen.storyboard */,
 				72E968EF204793B100D9CF28 /* Info.plist */,
 				72CE9947204C58C500436865 /* Concentration.swift */,
+				7266AF04204E100E00112A1E /* GameState.swift */,
+				7266AF06204E108A00112A1E /* NoCardsFaceUpGameState.swift */,
+				7266AF08204E112600112A1E /* OneCardFaceUpGameState.swift */,
+				7266AF0A204E150500112A1E /* TwoFaceUpCardsGameState.swift */,
 			);
 			path = Concentration;
 			sourceTree = "<group>";
@@ -142,9 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7266AF09204E112600112A1E /* OneCardFaceUpGameState.swift in Sources */,
 				72E968E6204793B100D9CF28 /* ViewController.swift in Sources */,
 				72CE9948204C58C500436865 /* Concentration.swift in Sources */,
+				7266AF07204E108A00112A1E /* NoCardsFaceUpGameState.swift in Sources */,
+				7266AF05204E100E00112A1E /* GameState.swift in Sources */,
 				72CE9946204C570B00436865 /* Card.swift in Sources */,
+				7266AF0B204E150500112A1E /* TwoFaceUpCardsGameState.swift in Sources */,
 				72E968E4204793B100D9CF28 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

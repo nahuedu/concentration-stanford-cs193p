@@ -19,20 +19,11 @@ class Card {
     }
     
     func wasChosen(){
-        //horrible if structure :(
-        if(isFaceUp){
-            if(isMatched){
-                //nothing
-            } else{
-                //nothing
-            }
-        } else{
-            if(isMatched){
-                //nothing
-            } else{
-                isFaceUp = true
-            }
-        }
+        isFaceUp=true
+    }
+    
+    func putDown() {
+        self.isFaceUp=false
     }
     
     func match(){
