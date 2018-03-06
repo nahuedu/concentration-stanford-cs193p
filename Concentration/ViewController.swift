@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     lazy var concentrationGame = Concentration(numberOfPairsOfCards: cardButtonCollection.count / 2)
     
     @IBOutlet var cardButtonCollection: [UIButton]!
-    var emojiDictionary = [1:"😀"]
+    var emojiDictionary = [1:"😀", 2:"💩", 3:"👻"]
     
     @IBAction func touchCard(_ sender: UIButton) {
         let indexOfCard = cardButtonCollection.index(of: sender)!
@@ -39,6 +39,7 @@ class ViewController: UIViewController {
                 cardButton.setTitle(emojiDictionary[cardIndex], for: UIControlState.normal)
             } else {
                 cardButton.backgroundColor = #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
+                cardButton.setTitle("", for: UIControlState.normal)
             }
         }
     }
