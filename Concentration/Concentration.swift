@@ -15,7 +15,7 @@ class Concentration {
     var gameState : GameState = NoCardsFaceUpGameState()
     
     init(numberOfPairsOfCards : Int) {
-        for index in 1...numberOfPairsOfCards{
+        for index in 0..<numberOfPairsOfCards{
             cardCollection.append(Card(identifier: index))
             cardCollection.append(Card(identifier: index))
         }

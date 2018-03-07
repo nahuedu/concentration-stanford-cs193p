@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     lazy var concentrationGame = Concentration(numberOfPairsOfCards: cardButtonCollection.count / 2)
+    lazy var emojiDictionary = ThemeSelector(numberOfPairsOfCards: cardButtonCollection.count / 2).getRandomTheme()
     
     @IBOutlet var cardButtonCollection: [UIButton]!
-    var emojiDictionary = [1:"😀", 2:"💩", 3:"👻"]
     
     @IBAction func touchCard(_ sender: UIButton) {
         let indexOfCard = cardButtonCollection.index(of: sender)!
@@ -44,9 +44,10 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func pushNewGameButton(_ sender: UIButton) {
-        let numberOfPairOfCards = self.cardButtonCollection.count / 2
-        self.concentrationGame = Concentration(numberOfPairsOfCards: numberOfPairOfCards)
+        let numberOfPairsOfCards = self.cardButtonCollection.count / 2
+        self.concentrationGame = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
         self.updateViewFromModel()
+        self.emojiDictionary = ThemeSelector(numberOfPairsOfCards: numberOfPairsOfCards).getRandomTheme()
     }
     
 }
