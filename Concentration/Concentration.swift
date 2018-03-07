@@ -19,6 +19,7 @@ class Concentration {
             cardCollection.append(Card(identifier: index))
             cardCollection.append(Card(identifier: index))
         }
+        self.shuffleCards()
     }
     
     func chooseCard(at index: Int){
@@ -26,4 +27,14 @@ class Concentration {
         self.gameState = self.gameState.chooseCard(card)
     }
     
+    func shuffleCards(){
+        for index in 0..<cardCollection.count{
+            let card = cardCollection[index]
+            let newRandomPosition = Int(arc4random_uniform(UInt32(self.cardCollection.count)))
+            let secondCard = cardCollection[newRandomPosition]
+            //swap the cards
+            cardCollection[newRandomPosition] = card
+            cardCollection[index] = secondCard
+        }
+    }
 }
