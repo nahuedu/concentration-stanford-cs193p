@@ -43,6 +43,11 @@ class ViewController: UIViewController {
             }
         }
     }
+    @IBAction func pushNewGameButton(_ sender: UIButton) {
+        let numberOfPairOfCards = self.cardButtonCollection.count / 2
+        self.concentrationGame = Concentration(numberOfPairsOfCards: numberOfPairOfCards)
+        self.updateViewFromModel()
+    }
     
 }
 
