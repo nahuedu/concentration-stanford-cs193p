@@ -13,6 +13,7 @@ class Concentration {
     
     var cardCollection = [Card]()
     var gameState : GameState = NoCardsFaceUpGameState()
+    var score = 0
     
     init(numberOfPairsOfCards : Int) {
         for index in 0..<numberOfPairsOfCards{

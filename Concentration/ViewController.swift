@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var cardButtonCollection: [UIButton]!
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     @IBAction func touchCard(_ sender: UIButton) {
         let indexOfCard = cardButtonCollection.index(of: sender)!
         concentrationGame.chooseCard(at: indexOfCard)
@@ -27,6 +29,7 @@ class ViewController: UIViewController {
             let cardButton = cardButtonCollection[cardButtonIndex]
             updateButtonFromCard(cardButton, card, card.identifier)
         }
+        self.scoreLabel.text = "Score: \(self.concentrationGame.score)"
     }
     
     func updateButtonFromCard(_ cardButton: UIButton, _ card: Card, _ cardIndex: Int){

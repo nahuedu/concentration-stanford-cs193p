@@ -22,6 +22,9 @@ class ThemeSelector{
         self.themes.append(["🤬","😎","🤩","😍","🤮","😱"])
         self.themes.append(["🦁","🦒","🦓","🐸","🐊","🦈"])
         self.themes.append(["⚽️","🏈","🏀","🎾","⚾️","🏐"])
+        self.themes.append(["🍎","🍇","🥝","🍌","🥥","🍍"])
+        self.themes.append(["🍔","🍕","🌭","🥪","🌮","🌯"])
+        self.themes.append(["🎂","🍦","🍰","☕️","🍪","🍩"])
     }
     
     func getRandomTheme() -> [Int:String]{
