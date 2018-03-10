@@ -16,8 +16,9 @@ class OneCardFaceUpState : GameState{
         self.faceUpCard=card
     }
     
-    override func chooseCard(_ card: Card) -> GameState {
+    override func chooseCard(card : Card, score : Int, game: Concentration) -> Int {
         card.wasChosen()
-        return TwoFaceUpCardsGameState(faceUpCard, card)
+        game.changeState(TwoFaceUpCardsGameState(faceUpCard, card))
+        return score
     }
 }

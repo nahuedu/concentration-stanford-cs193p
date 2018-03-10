@@ -49,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7223F11B20543574004BCCAF /* GameState */ = {
+			isa = PBXGroup;
+			children = (
+				7266AF0A204E150500112A1E /* TwoFaceUpCardsGameState.swift */,
+				7266AF08204E112600112A1E /* OneCardFaceUpGameState.swift */,
+				7266AF06204E108A00112A1E /* NoCardsFaceUpGameState.swift */,
+				7266AF04204E100E00112A1E /* GameState.swift */,
+			);
+			path = GameState;
+			sourceTree = "<group>";
+		};
 		72E968D7204793B100D9CF28 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +79,7 @@
 		72E968E2204793B100D9CF28 /* Concentration */ = {
 			isa = PBXGroup;
 			children = (
+				7223F11B20543574004BCCAF /* GameState */,
 				720F75602050AD5A0097E0EC /* ThemeSelector.swift */,
 				72E968E3204793B100D9CF28 /* AppDelegate.swift */,
 				72E968E5204793B100D9CF28 /* ViewController.swift */,
@@ -77,10 +89,6 @@
 				72E968EC204793B100D9CF28 /* LaunchScreen.storyboard */,
 				72E968EF204793B100D9CF28 /* Info.plist */,
 				72CE9947204C58C500436865 /* Concentration.swift */,
-				7266AF04204E100E00112A1E /* GameState.swift */,
-				7266AF06204E108A00112A1E /* NoCardsFaceUpGameState.swift */,
-				7266AF08204E112600112A1E /* OneCardFaceUpGameState.swift */,
-				7266AF0A204E150500112A1E /* TwoFaceUpCardsGameState.swift */,
 			);
 			path = Concentration;
 			sourceTree = "<group>";

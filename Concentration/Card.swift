@@ -13,6 +13,7 @@ class Card {
     var isFaceUp = false
     var isMatched = false
     var identifier : Int
+    var wasSeen = false
     
     init(identifier : Int){
         self.identifier = identifier
@@ -24,6 +25,7 @@ class Card {
     
     func putDown() {
         self.isFaceUp=false
+        self.wasSeen = true
     }
     
     func match(){

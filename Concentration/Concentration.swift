@@ -25,7 +25,7 @@ class Concentration {
     
     func chooseCard(at index: Int){
         let card = cardCollection[index]
-        self.gameState = self.gameState.chooseCard(card)
+        self.score = self.gameState.chooseCard(card: card, score: score, game: self)
     }
     
     func shuffleCards(){
@@ -37,5 +37,9 @@ class Concentration {
             cardCollection[newRandomPosition] = card
             cardCollection[index] = secondCard
         }
+    }
+    
+    func changeState(_ state: GameState){
+        self.gameState = state
     }
 }

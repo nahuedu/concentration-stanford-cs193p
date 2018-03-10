@@ -10,9 +10,10 @@ import Foundation
 
 class GameState{
     
-    
-    func chooseCard(_ card : Card) -> GameState{
-        return GameState() //should not be used
+    //should not be used
+    func chooseCard(card : Card, score : Int, game: Concentration) -> Int{
+        game.changeState(GameState())
+        return score
     }
     
 }

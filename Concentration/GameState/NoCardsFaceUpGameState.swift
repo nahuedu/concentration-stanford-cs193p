@@ -10,8 +10,9 @@ import Foundation
 
 class NoCardsFaceUpGameState : GameState{
     
-    override func chooseCard(_ card: Card) -> GameState {
+    override func chooseCard(card : Card, score : Int, game: Concentration) -> Int {
         card.wasChosen()
-        return OneCardFaceUpState(card: card)
+        game.changeState(OneCardFaceUpState(card: card))
+        return score
     }
 }

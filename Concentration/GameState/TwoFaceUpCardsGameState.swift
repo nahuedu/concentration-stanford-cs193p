@@ -19,15 +19,27 @@ class TwoFaceUpCardsGameState : GameState{
         self.secondFaceUpCard=card2
     }
     
-    override func chooseCard(_ card: Card) -> GameState {
+    override func chooseCard(card : Card, score : Int, game: Concentration) -> Int {
+        var newScore = score
         if(firstFaceUpCard.identifier == secondFaceUpCard.identifier){
             self.firstFaceUpCard.match()
             self.secondFaceUpCard.match()
+            newScore += 2
         } else {
+            
+            if(self.firstFaceUpCard.wasSeen){
+                newScore-=1
+            }
+            
+            if(self.secondFaceUpCard.wasSeen){
+                newScore-=1
+            }
+            
             self.firstFaceUpCard.putDown()
             self.secondFaceUpCard.putDown()
         }
         card.wasChosen()
-        return OneCardFaceUpState(card: card)
+        game.changeState(OneCardFaceUpState(card: card))
+        return newScore
     }
 }
